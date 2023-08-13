@@ -56,6 +56,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -171,8 +173,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308132050268_InitialModel.cs" />
+    <Compile Include="Migrations\202308132050268_InitialModel.designer.cs">
+      <DependentUpon>202308132050268_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308132103205_Add_IsSubscribedToNewsLetter.cs" />
+    <Compile Include="Migrations\202308132103205_Add_IsSubscribedToNewsLetter.designer.cs">
+      <DependentUpon>202308132103205_Add_IsSubscribedToNewsLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308132131590_Add_MembershipType.cs" />
+    <Compile Include="Migrations\202308132131590_Add_MembershipType.designer.cs">
+      <DependentUpon>202308132131590_Add_MembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308132135375_PopulateMembershipType.cs" />
+    <Compile Include="Migrations\202308132135375_PopulateMembershipType.designer.cs">
+      <DependentUpon>202308132135375_PopulateMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -253,6 +272,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202308132050268_InitialModel.resx">
+      <DependentUpon>202308132050268_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308132103205_Add_IsSubscribedToNewsLetter.resx">
+      <DependentUpon>202308132103205_Add_IsSubscribedToNewsLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308132131590_Add_MembershipType.resx">
+      <DependentUpon>202308132131590_Add_MembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308132135375_PopulateMembershipType.resx">
+      <DependentUpon>202308132135375_PopulateMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
